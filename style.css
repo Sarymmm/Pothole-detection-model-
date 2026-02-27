@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f1117;
+    color: #e0e0e0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.dashboard {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+    max-width: 1200px;
+    align-items: flex-start;
+}
+
+/* ── Left Panel ── */
+.left-panel {
+    flex: 1.4;
+    background: #1a1d27;
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid #2a2d3e;
+}
+
+.left-panel h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #7b8cde;
+    margin-bottom: 16px;
+}
+
+#videoFeed {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 10px;
+    background: #0a0b10;
+    object-fit: cover;
+    display: block;
+    border: 2px solid #2a2d3e;
+}
+
+/* ── Right Panel ── */
+.right-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.right-panel h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #7b8cde;
+}
+
+/* ── Cards ── */
+.card {
+    background: #1a1d27;
+    border: 1px solid #2a2d3e;
+    border-radius: 12px;
+    padding: 20px 24px;
+    transition: border-color 0.2s;
+}
+
+.card:hover {
+    border-color: #4a5490;
+}
+
+.card h3 {
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #6b7280;
+    margin-bottom: 8px;
+}
+
+.card p {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+}
+
+/* ── Controls ── */
+.controls {
+    display: flex;
+    gap: 10px;
+}
+
+.controls button {
+    flex: 1;
+    padding: 12px 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s, opacity 0.2s;
+}
+
+.controls button:active {
+    transform: scale(0.97);
+}
+
+#startBtn {
+    background: #22c55e;
+    color: #fff;
+}
+
+#startBtn:hover {
+    background: #16a34a;
+}
+
+#pauseBtn {
+    background: #f59e0b;
+    color: #fff;
+}
+
+#pauseBtn:hover {
+    background: #d97706;
+}
+
+#stopBtn {
+    background: #ef4444;
+    color: #fff;
+}
+
+#stopBtn:hover {
+    background: #dc2626;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .left-panel,
+    .right-panel {
+        width: 100%;
+    }
+
+    .card p {
+        font-size: 1.6rem;
+    }
+}

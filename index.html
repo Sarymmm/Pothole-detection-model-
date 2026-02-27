@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pothole Detection Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="data:,">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <div class="left-panel">
+        <h2>Live Camera</h2>
+        <img id="videoFeed" src="" alt="Video Feed">
+    </div>
+
+    <div class="right-panel">
+        <h2>System Dashboard</h2>
+
+        <div class="card">
+            <h3>Detection Count</h3>
+            <p id="count">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Probability</h3>
+            <p id="probability">0.000</p>
+        </div>
+
+        <div class="card">
+            <h3>GPS Coordinates</h3>
+            <p id="gps">--</p>
+        </div>
+
+        <div class="controls">
+            <button id="startBtn">Start</button>
+            <button id="pauseBtn">Pause</button>
+            <button id="stopBtn">Stop</button>
+        </div>
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+</html>
